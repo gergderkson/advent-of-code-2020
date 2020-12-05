@@ -1,0 +1,8 @@
+import test from 'ava';
+const method = require('./');
+
+test('example 1', t => {
+	const input = ['BFFFBBFRRR', 'FFFBBBFRRR', 'BBFFBBFRLL'];
+	const result = method(input);
+	t.is(result, 820);
+});
