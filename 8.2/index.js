@@ -42,9 +42,7 @@ const main = (input) => {
 		testInstructions[i][1] = 'nop';
 
 		let results = testForInfiniteLoop(testInstructions);
-		if(results !== false){
-			return results;
-		}
+		if(results) return results;
 	}
 
 	for (const i of nopIndexes) {
@@ -52,9 +50,8 @@ const main = (input) => {
 		testInstructions[i][1] = 'jmp';
 
 		let results = testForInfiniteLoop(testInstructions);
-		if(results !== false){
-			return results;
-		}
+		if(results) return results;
+
 	}
 
 };
